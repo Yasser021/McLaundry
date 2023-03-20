@@ -9,9 +9,13 @@
 </head>
 
 <body>
-    @include('layout.sidebar')
-    @yield('konten')
-    @include('part.js')
-</body>
+    <div class="app">
+        <div class="" id="main">
+            @include('layout.sidebar')
+            @yield('konten')
+            @include('part.js')
+        </div>
+    </div>
 
+</body>
 </html>
