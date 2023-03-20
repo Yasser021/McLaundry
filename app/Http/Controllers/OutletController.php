@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Outlet;
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 
 class OutletController extends Controller
@@ -14,7 +15,7 @@ class OutletController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.tableOut');
     }
 
     /**
@@ -24,7 +25,7 @@ class OutletController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.tambahOut');
     }
 
     /**
@@ -35,7 +36,25 @@ class OutletController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'id_outlet'=>'required|numeric|unique:outlet,id_outlet',
+            'nm_outlet'=>'required',
+            'alamat_outlet'=>'required',
+            'no_outlet'=>'required',
+        ],[
+            'id_outlet.required' => 'ID Outlet Wajib Diisi',
+            'nm_outlet.required' => 'Nama Outlet Wajib Diisi',
+            'alamat_outlet.required' => 'Alamat Outlet Wajib Diisi',
+            'no_outlet.required' => 'No Outlet Wajib Diisi',
+        ]);
+
+        $data = [
+            'id_outlet'=>$request->id_outlet,
+            'nm_outlet'=>$request->nm_outlet,
+            'alamat_outlet'=>$request->alamat_outlet,
+            'no_outlet'=>$request->no_outlet
+        ];
+        Outlet::create($data);
     }
 
     /**
@@ -46,7 +65,7 @@ class OutletController extends Controller
      */
     public function show(Outlet $outlet)
     {
-        //
+        
     }
 
     /**

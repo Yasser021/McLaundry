@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\OutletController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,8 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('admin.home');
+    return view('sesi.login');
 });
-Route::get('/table', function () {
-    return view('admin.tableOut');
+Route::get('/tambah', function () {
+    return view('admin.tambahOut');
 });
+
+Route::resource('outlet', OutletController::class);

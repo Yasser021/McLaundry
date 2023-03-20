@@ -1,11 +1,17 @@
 @extends('admin.main')
 
 @section('konten')
-    <h3>Table Outlet</h3>
-    <p>Tentang Outlet yang perusahaan punya!</p>
+    <div class="mb-3">
+        <h3>Table Outlet</h3>
+        <div class="d-flex justify-content-between">
+            <p>Tentang Outlet yang perusahaan punya!</p>
+            <a href="outlet/create" type="button" class="btn btn-primary">Tambah</a>
+        </div>
+    </div>
+
     <div class="card">
         <div class="card-body">
-            <table class="table">
+            <table class="table table-striped">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
