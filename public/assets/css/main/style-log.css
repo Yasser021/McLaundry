@@ -1,0 +1,69 @@
+body {
+    background-color: #c0eef2;
+    font-family: "Lexend", sans-serif;
+}
+
+.input {
+    background-color: #8dcbe6;
+}
+
+.butlog {
+    background-color: #8dcbe6;
+    color: white;
+
+    width: 400px;
+    height: 45px;
+
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.butlog:hover {
+    background-color: #009eff;
+    color: white;
+}
+
+.cf {
+    width: 450px;
+    height: 400px;
+    left: 215px;
+    top: 100px;
+
+    background: #ffffff;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.regis {
+    color: grey;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cd {
+    width: 245px;
+    height: 400px;
+    right: 100px;
+    top: 100px;
+
+    background: #009eff;
+    border-radius: 0px 15px 15px 0px;
+}
+
+.cf-r {
+    width: 450px;
+    height: 525px;
+    left: 215px;
+    top: 50px;
+
+    background: #ffffff;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.cd-r {
+    width: 245px;
+    height: 525px;
+    right: 100px;
+    top: 50px;
+
+    background: #009eff;
+    border-radius: 0px 15px 15px 0px;
+}

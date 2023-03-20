@@ -1,0 +1,62 @@
+body {
+    font-family: "Lexend", sans-serif;
+}
+
+/* nav */
+.nav1 {
+    background-color: #c0eef2;
+    color: #00337c;
+}
+
+/* konten */
+.cont {
+    position: absolute;
+    width: 1280px;
+    height: 350px;
+}
+
+.kon {
+    box-sizing: border-box;
+
+    width: 450px;
+    height: 350px;
+
+    background: #8dcbe6;
+    border-radius: 0px 250px 200px 0px;
+}
+
+.kon-text {
+    width: 250px;
+
+    margin-top: 100px;
+    margin-left: 50px;
+
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+
+    color: #ffffff;
+}
+.kon-text2 {
+    width: 250px;
+
+    margin-left: 50px;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+
+    color: #ffffff;
+}
+
+.butkon {
+    margin-left: 50px;
+    margin-top: 20px;
+
+    background-color: #ffea20;
+}
+
+.butkon:hover {
+    background-color: #f5de0f;
+}
+/* end konten */
