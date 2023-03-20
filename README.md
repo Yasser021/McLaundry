@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/<h1 align="center">McLaundry</h1>
+<h1 align="center"><a href="https://laravel.com" target="_blank">McLaundry</h1>
 
 ## Tentang Mclaundry
 
