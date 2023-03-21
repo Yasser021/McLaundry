@@ -1,5 +1,5 @@
 @extends('admin.main')
 
 @section('konten')
-    <button class="btn btn-primary" type="button">Admin</button>
+   <h1>HI Admin!</h1>
 @endsection

@@ -17,8 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('sesi.login');
 });
-Route::get('/tambah', function () {
-    return view('admin.tambahOut');
+Route::get('/admin', function () {
+    return view('admin.home');
 });
 
 Route::resource('outlet', OutletController::class);
