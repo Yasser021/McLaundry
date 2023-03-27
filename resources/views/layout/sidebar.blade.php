@@ -49,13 +49,24 @@
                     </a>
                 </li>
 
-                <li class="sidebar-title">Forms &amp; Tables</li>
+                <li class="sidebar-title">Tables</li>
 
                 <li class="sidebar-item">
                     <a href="outlet" class="sidebar-link">
                         <i class="bi bi-hexagon-fill"></i>
-                        <span>table Outlet</span>
+                        <span>Table Outlet</span>
                     </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="member" class="sidebar-link">
+                        <i class="bi bi-hexagon-fill"></i>
+                        <span>Table Member</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <div class="d-flex justify-content-center">
+                        <a href="sesi/logout" class="btn btn-outline-danger" type="button">Logout</a>
+                    </div>
                 </li>
             </ul>
         </div>
