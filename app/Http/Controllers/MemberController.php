@@ -14,7 +14,8 @@ class MemberController extends Controller
      */
     public function index()
     {
-        return view('admin.tableMem');
+        $data = Member::orderBy('id_member', 'Asc')->paginate(3);
+        return view('admin.tableMem')->with('data', $data);
     }
 
     /**
@@ -81,7 +82,8 @@ class MemberController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = Member::where('id_member', $id)->first();
+        return view('admin.editMem')->with('data',$data);
     }
 
     /**
@@ -93,7 +95,15 @@ class MemberController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = [
+            'id_member'=>$request->id_member,
+            'nm_member'=>$request->nm_member,
+            'alamat_member'=>$request->alamat_member,
+            'jk'=>$request->jk,
+            'no_member'=>$request->no_member
+        ];
+        Member::where('id_member',$id)->update($data);
+        return redirect()->to('member')->with('success', 'Berhasil Menambahkan Data Paket');
     }
 
     /**
@@ -104,6 +114,7 @@ class MemberController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Member::where('id_member', $id)->delete();
+        return redirect()->to('member')->with('success', 'berhasil mengapus data');
     }
 }

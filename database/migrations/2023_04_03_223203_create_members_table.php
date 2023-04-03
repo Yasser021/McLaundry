@@ -14,12 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('member', function (Blueprint $table) {
-           $table->integer('id_member');
-           $table->unique('id_member');
-           $table->string('nm_member');
-           $table->string('alamat_member');
-           $table->enum("jk",['Pria','wanita']);
-           $table->string('no_member');
+            $table->integer('id_member');
+            $table->unique('id_member');
+            $table->string('nm_member');
+            $table->string('alamat_member');
+            $table->enum("jk",['Pria','wanita']);
+            $table->string('no_member');
         });
     }
 

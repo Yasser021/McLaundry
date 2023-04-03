@@ -39,13 +39,13 @@
                 <div class="mb-3">
                     <label for="jk">Jenis Kelamin</label>
                     <div class="form-check my-2 ">
-                        <input class="form-check-input" type="radio" name="jk" id="flexRadioDefault1">
+                        <input class="form-check-input" type="radio" name="jk" id="flexRadioDefault1" value="Pria">
                         <label class="form-check-label" for="flexRadioDefault1">
                             Pria
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="jk" id="flexRadioDefault1">
+                        <input class="form-check-input" type="radio" name="jk" id="flexRadioDefault1" value="Wanita">
                         <label class="form-check-label" for="flexRadioDefault1">
                           Wanita
                         </label>
@@ -59,7 +59,7 @@
                 </div>
                 <div class="">
                     <button class="btn btn-success" type="submit">Tambah</button>
-                    <a href="member" class="btn btn-secondary mx-2" type="button">Kembali</a>
+                    <a href="/member" class="btn btn-secondary mx-2" type="button">Kembali</a>
                     <button class="btn btn-danger" type="reset">Ulang</button>
                 </div>
             </form>

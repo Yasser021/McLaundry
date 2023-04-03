@@ -63,6 +63,12 @@
                         <span>Table Paket</span>
                     </a>
                 </li>
+                <li class="sidebar-item">
+                    <a href="member" class="sidebar-link">
+                        <i class="bi bi-hexagon-fill"></i>
+                        <span>Table Member</span>
+                    </a>
+                </li>
 
                 <li class="sidebar-item">
                     <div class="d-flex justify-content-center">
