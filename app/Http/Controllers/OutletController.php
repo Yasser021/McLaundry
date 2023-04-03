@@ -92,17 +92,6 @@ class OutletController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $request->validate([
-            'id_outlet'=>'required|numeric|unique:outlet,id_outlet',
-            'nm_outlet'=>'required',
-            'alamat_outlet'=>'required',
-            'no_outlet'=>'required',
-        ],[
-            'id_outlet.required' => 'ID Outlet tidak boleh kosong',
-            'nm_outlet.required' => 'Nama Outlet tidak boleh kosong',
-            'alamat_outlet.required' => 'Alamat Outlet tidak boleh kosong',
-            'no_outlet.required' => 'No Outlet tidak boleh kosong',
-        ]);
 
         $data = [
             'id_outlet'=>$request->id_outlet,

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\OutletController;
 use App\Http\Controllers\MemberController;
+use App\Http\Controllers\PaketController;
 use App\Http\Controllers\SessionController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,16 +18,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('user.home-user');
 });
-Route::get('/login', function () {
-    return view('sesi.login');
+Route::get('tentang', function () {
+    return view('user.tentang');
+});
+Route::get('pesan', function () {
+    return view('user.pesan');
+});
+Route::get('histori', function () {
+    return view('user.histori');
 });
 Route::get('/admin', function () {
     return view('admin.home');
 });
 
 Route::resource('outlet', OutletController::class);
+Route::resource('paket', PaketController::class);
 // sesi login dan regis
 Route::get('sesi', [SessionController::class, 'index']);
 Route::post('sesi/login', [SessionController::class, 'login']);

@@ -3,7 +3,7 @@
         <div class="sidebar-header position-relative">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="logo">
-                    <a href="/admin"><img src="../../assets/images/logo/logo.svg" alt="Logo" srcset="" /></a>
+                    <h5 class="mt-2">McLaundry</h5>
                 </div>
                 <div class="theme-toggle d-flex gap-2 align-items-center mt-2">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -58,11 +58,12 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="member" class="sidebar-link">
+                    <a href="paket" class="sidebar-link">
                         <i class="bi bi-hexagon-fill"></i>
-                        <span>Table Member</span>
+                        <span>Table Paket</span>
                     </a>
                 </li>
+
                 <li class="sidebar-item">
                     <div class="d-flex justify-content-center">
                         <a href="sesi/logout" class="btn btn-outline-danger" type="button">Logout</a>

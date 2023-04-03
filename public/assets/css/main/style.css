@@ -60,3 +60,18 @@ body {
     background-color: #f5de0f;
 }
 /* end konten */
+
+.cc {
+    width: 150px;
+    height: 150px;
+
+    margin-top: 10px;
+    background: #8dcbe6;
+    border-radius: 15px;
+}
+
+.tentang{
+
+background: rgba(246, 234, 190, 0.26);
+border-radius: 10px;
+}
