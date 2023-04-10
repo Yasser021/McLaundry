@@ -31,7 +31,6 @@
                         <td>{{ $i }}</td>
                         <td>{{ $item->id_paket }}</td>
                         <td>{{ $item->id_outlet }}</td>
-                        <td>{{ $item->nm_outlet }}</td>
                         <td>{{ $item->nm_paket }}</td>
                         <td>{{ $item->jenis }}</td>
                         <td>Rp.{{ $item->harga }}</td>

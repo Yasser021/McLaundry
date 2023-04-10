@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Outlet;
+use App\Models\Pegawai;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PegawaiController extends Controller
 {
@@ -13,7 +16,12 @@ class PegawaiController extends Controller
      */
     public function index()
     {
-        //
+        $outlet = DB::table('outlet')
+        ->join('pegawai', 'pegawai.id_outlet', '=', 'outlet.id_outlet')
+        ->get();
+        $data = Pegawai::orderBy('id_pegawai', 'Asc')
+        ->paginate(3);
+        return view('admin.tablePeg')->with('data', $data)->with('outlet', $outlet );
     }
 
     /**
@@ -23,7 +31,8 @@ class PegawaiController extends Controller
      */
     public function create()
     {
-        //
+        $outlet = Outlet::all();
+        return view('admin.tambahPeg', compact('outlet'));
     }
 
     /**
@@ -34,7 +43,15 @@ class PegawaiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = [
+            'id_pegawai'=>$request->id_pegawai,
+            'id_outlet'=>$request->id_outlet,
+            'nm_pegawai'=>$request->nm_pegawai,
+            'jk'=>$request->jk,
+            'no_telp'=>$request->no_telp
+        ];
+        Pegawai::create($data);
+        return redirect()->to('pegawai')->with('success','Berhasil Menambahkan Data Paket');
     }
 
     /**
@@ -56,7 +73,9 @@ class PegawaiController extends Controller
      */
     public function edit($id)
     {
-        //
+        $outlet = Outlet::all();
+        $data = Pegawai::where('id_pegawai', $id)->first();
+        return view('admin.editPeg', compact('outlet'))->with('data',$data);
     }
 
     /**
@@ -68,7 +87,15 @@ class PegawaiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = [
+            'id_pegawai'=>$request->id_pegawai,
+            'id_outlet'=>$request->id_outlet,
+            'nm_pegawai'=>$request->nm_pegawai,
+            'jk'=>$request->jk,
+            'no_telp'=>$request->no_telp
+        ];
+        Pegawai::where('id_pegawai',$id)->update($data);
+        return redirect()->to('pegawai')->with('success', 'Berhasil Menambahkan Data Paket');
     }
 
     /**
@@ -79,6 +106,7 @@ class PegawaiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Pegawai::where('id_pegawai', $id)->delete();
+        return redirect()->to('pegawai')->with('success', 'berhasil mengapus data');
     }
 }

@@ -2,7 +2,7 @@
 
 @section('konten')
     <div class="mb-3">
-        <h3>Tambah Data Paket</h3>
+        <h3>Tambah Data Pegawai</h3>
     </div>
     <div class="card">
         <div class="card-body">
@@ -20,15 +20,15 @@
             @endif
             {{-- end alert --}}
             {{-- Form tambah --}}
-            <form action="{{ url('paket') }}" method="post">
+            <form action="{{ url('pegawai') }}" method="post">
                 @csrf
                 <div class="mb-3">
-                    <label for="id" class="mb-2">ID paket</label>
-                    <input type="number" name="id_paket" id="id" class="form-control" placeholder="Isi ID Paket">
+                    <label for="id" class="mb-2">ID pegawai</label>
+                    <input type="number" name="id_pegawai" id="id" class="form-control" placeholder="Isi ID Pegawai">
                 </div>
                 <div class="mb-3">
-                    <label for="nm" class="mb-2">Nama paket</label>
-                    <input type="text" name="nm_paket" id="nm" class="form-control" placeholder="Isi Nama Paket">
+                    <label for="nm" class="mb-2">Nama Pegawai</label>
+                    <input type="text" name="nm_pegawai" id="nm" class="form-control" placeholder="Isi Nama Pegawai">
                 </div>
                 <div class="mb-3">
                     <label for="no" class="mb-2">Nama Outlet</label>
@@ -39,19 +39,27 @@
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label for="alamat" class="mb-2">Jenis Paket</label>
-                    <select name="jenis" id="jenis" class="form-control">
-                        <option value="satuan">Satuan</option>
-                        <option value="kiloan">kiloan</option>
-                    </select>
+                    <label for="jk">Jenis Kelamin</label>
+                    <div class="form-check my-2 ">
+                        <input class="form-check-input" type="radio" name="jk" id="flexRadioDefault1" value="Pria">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Pria
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="jk" id="flexRadioDefault1" value="Wanita">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Wanita
+                        </label>
+                      </div>
                 </div>
                 <div class="mb-3">
-                    <label for="no" class="mb-2">Harga</label>
-                    <input type="number" name="harga" id="no" class="form-control" placeholder="Isi Harga paket">
+                    <label for="no" class="mb-2">No.Telp</label>
+                    <input type="number" name="no_telp" id="no" class="form-control"
+                        placeholder="Isi Nomor Telepon Member">
                 </div>
-                <div class="">
                     <button class="btn btn-success" type="submit">Tambah</button>
-                    <a href="/paket" class="btn btn-secondary mx-2" type="button">Kembali</a>
+                    <a href="../pegawai" class="btn btn-secondary mx-2" type="button">Kembali</a>
                     <button class="btn btn-danger" type="reset">Ulang</button>
                 </div>
             </form>

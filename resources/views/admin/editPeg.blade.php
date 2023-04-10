@@ -2,7 +2,7 @@
 
 @section('konten')
     <div class="mb-3">
-        <h3>Tambah Data Member</h3>
+        <h3>Tambah Data Pegawai</h3>
     </div>
     <div class="card">
         <div class="card-body">
@@ -20,21 +20,24 @@
             @endif
             {{-- end alert --}}
             {{-- Form tambah --}}
-            <form action="{{ url('member') }}" method="post">
+            <form action="{{ url('pegawai/'.$data->id_pegawai) }}" method="post">
                 @csrf
+                @method('PUT')
                 <div class="mb-3">
-                    <label for="id" class="mb-2">ID member</label>
-                    <input type="number" name="id_member" id="id" class="form-control" placeholder="Isi ID Member">
+                    <label for="id" class="mb-2">ID pegawai</label>
+                    <input type="number" name="id_pegawai" id="id" class="form-control" placeholder="Isi ID Pegawai" value="{{ $data->id_pegawai }}">
                 </div>
                 <div class="mb-3">
-                    <label for="nm" class="mb-2">Nama member</label>
-                    <input type="text" name="nm_member" id="nm" class="form-control"
-                        placeholder="Isi Nama Member">
+                    <label for="nm" class="mb-2">Nama Pegawai</label>
+                    <input type="text" name="nm_pegawai" id="nm" class="form-control" placeholder="Isi Nama Pegawai"value="{{ $data->nm_pegawai }}">
                 </div>
                 <div class="mb-3">
-                    <label for="alamat" class="mb-2">Alamat</label>
-                    <input type="text" name="alamat_member" id="alamat" class="form-control"
-                        placeholder="Isi Alamat Member">
+                    <label for="no" class="mb-2">Nama Outlet</label>
+                    <select name="id_outlet" id="" class="form-control">
+                        @foreach ($outlet as $item)
+                        <option value="{{ $item->id_outlet }}">{{ $item->nm_outlet }}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <div class="mb-3">
                     <label for="jk">Jenis Kelamin</label>
@@ -51,15 +54,13 @@
                         </label>
                       </div>
                 </div>
-
                 <div class="mb-3">
                     <label for="no" class="mb-2">No.Telp</label>
-                    <input type="number" name="no_member" id="no" class="form-control"
-                        placeholder="Isi Nomor Telepon Member">
+                    <input type="number" name="no_telp" id="no" class="form-control"
+                        placeholder="Isi Nomor Telepon Member" value="{{ $data->no_telp }}">
                 </div>
-                <div class="">
                     <button class="btn btn-success" type="submit">Tambah</button>
-                    <a href="/member" class="btn btn-secondary mx-2" type="button">Kembali</a>
+                    <a href="../pegawai" class="btn btn-secondary mx-2" type="button">Kembali</a>
                     <button class="btn btn-danger" type="reset">Ulang</button>
                 </div>
             </form>
