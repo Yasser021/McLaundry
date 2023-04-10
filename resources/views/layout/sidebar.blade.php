@@ -69,6 +69,12 @@
                         <span>Table Member</span>
                     </a>
                 </li>
+                <li class="sidebar-item">
+                    <a href="../pegawai" class="sidebar-link">
+                        <i class="bi bi-hexagon-fill"></i>
+                        <span>Table pegawai</span>
+                    </a>
+                </li>
 
                 <li class="sidebar-item">
                     <div class="d-flex justify-content-center">
