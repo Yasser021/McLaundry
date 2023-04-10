@@ -7,7 +7,7 @@
                 <div class="card cf">
                     <div class="card-body">
                         <h4 class="text-center my-5">Log In</h4>
-                        <form action="sesi/login" method="Post">
+                        <form action="../sesi/login" method="Post">
                             @csrf
                             <div class="input-group mb-3">
                                 <span class="input-group-text input" id="username" for="email"><img

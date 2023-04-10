@@ -7,7 +7,7 @@
                 <div class="card cf-r">
                     <div class="card-body">
                         <h4 class="text-center my-5">Register</h4>
-                        <form action="/sesi/create" method="Post">
+                        <form action="../sesi/create" method="Post">
                             @csrf
                             <div class="input-group mb-3">
                                 <span class="input-group-text input" id="username" for="email"><img
@@ -15,12 +15,6 @@
                                 <input type="text" class="form-control " name="name" placeholder="Nama"
                                     aria-label="Nama" aria-describedby="basic-addon1">
                             </div>
-                            {{-- <div class="input-group mb-3">
-                                <span class="input-group-text input" id="username" for="email"><img
-                                        src="../assets/images/logo/person 1.png" alt="Person"></span>
-                                <input type="text" class="form-control " placeholder="Alamat" aria-label="alamat"
-                                    aria-describedby="basic-addon1">
-                            </div> --}}
                             <div class="input-group mb-3">
                                 <span class="input-group-text input" id="username" for="email"><img
                                         src="../assets/images/logo/at.png" alt="Person"></span>

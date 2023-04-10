@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
+use JetBrains\PhpStorm\Internal\ReturnTypeContract;
 
 class SessionController extends Controller
 {
@@ -52,16 +53,6 @@ class SessionController extends Controller
     }
     function create(Request $request)
     {
-        Session::flash('email', $request->email);
-
-        $request->validate([
-            'email' => 'required',
-            'password' => 'required',
-            'nama' => 'required'
-        ], [
-            'email.required' => 'Email wajib di isi',
-            'password.required' => 'Password wajib di isi',
-        ]);
 
         $data = [
             'name' => $request->name,
@@ -70,6 +61,6 @@ class SessionController extends Controller
         ];
 
         User::create($data);
-        return redirect()->to('sesi');
+        return redirect('sesi');
     }
 }

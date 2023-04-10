@@ -1,7 +1,6 @@
 <nav class="navbar navbar-expand-lg nav1">
     <div class="container-fluid">
-        <img src="../assets/images/logo/laund.png" alt="" width="75px" height="75px">
-        <a class="navbar-brand" href="#">McLaundry</a>
+        <img src="../assets/images/logo/mc-1.png" alt="" width="175px" height="50px">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

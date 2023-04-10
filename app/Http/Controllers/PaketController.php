@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Outlet;
 use App\Models\Paket;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PaketController extends Controller
 {
@@ -12,10 +14,14 @@ class PaketController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $data = Paket::orderBy('id_paket', 'Asc')->paginate(3);
-        return view('admin.tablePack')->with('data', $data);
+        $outlet = DB::table('outlet')
+        ->join('paket', 'paket.id_outlet', '=', 'outlet.id_outlet')
+        ->get();
+        $data = Paket::orderBy('id_paket', 'Asc')
+        ->paginate(3);
+        return view('admin.tablePack')->with('data', $data)->with('outlet', $outlet );
     }
 
     /**
@@ -25,7 +31,8 @@ class PaketController extends Controller
      */
     public function create()
     {
-        return view('admin.tambahPack');
+        $outlet = Outlet::all();
+        return view('admin.tambahPack', compact('outlet'));
     }
 
     /**
@@ -38,6 +45,7 @@ class PaketController extends Controller
     {
         $data = [
             'id_paket'=>$request->id_paket,
+            'id_outlet'=>$request->id_outlet,
             'nm_paket'=>$request->nm_paket,
             'jenis'=>$request->jenis,
             'harga'=>$request->harga
@@ -65,8 +73,9 @@ class PaketController extends Controller
      */
     public function edit($id)
     {
+        $outlet = Outlet::all();
         $data = Paket::where('id_paket', $id)->first();
-        return view('admin.editPack')->with('data',$data);
+        return view('admin.editPack', compact('outlet'))->with('data',$data);
     }
 
     /**
@@ -80,6 +89,7 @@ class PaketController extends Controller
     {
         $data = [
             'id_paket'=>$request->id_paket,
+            'id_outlet'=>$request->id_outlet,
             'nm_paket'=>$request->nm_paket,
             'jenis'=>$request->jenis,
             'harga'=>$request->harga

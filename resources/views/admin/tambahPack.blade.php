@@ -28,8 +28,15 @@
                 </div>
                 <div class="mb-3">
                     <label for="nm" class="mb-2">Nama paket</label>
-                    <input type="text" name="nm_paket" id="nm" class="form-control"
-                        placeholder="Isi Nama Paket">
+                    <input type="text" name="nm_paket" id="nm" class="form-control" placeholder="Isi Nama Paket">
+                </div>
+                <div class="mb-3">
+                    <label for="no" class="mb-2">Nama Outlet</label>
+                    <select name="id_outlet" id="" class="form-control">
+                        @foreach ($outlet as $item)
+                        <option value="{{ $item->id_outlet }}">{{ $item->nm_outlet }}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <div class="mb-3">
                     <label for="alamat" class="mb-2">Jenis Paket</label>
@@ -40,8 +47,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="no" class="mb-2">Harga</label>
-                    <input type="number" name="harga" id="no" class="form-control"
-                        placeholder="Isi Harga paket">
+                    <input type="number" name="harga" id="no" class="form-control" placeholder="Isi Harga paket">
                 </div>
                 <div class="">
                     <button class="btn btn-success" type="submit">Tambah</button>

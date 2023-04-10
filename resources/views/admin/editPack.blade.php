@@ -28,6 +28,14 @@
                     <input type="number" name="id_paket" id="id" class="form-control" placeholder="Isi ID Paket" value="{{ $data->id_paket }}">
                 </div>
                 <div class="mb-3">
+                    <label for="no" class="mb-2">Nama Outlet</label>
+                    <select name="id_outlet" id="" class="form-control">
+                        @foreach ($outlet as $item)
+                        <option value="{{ $item->id_outlet }}">{{ $item->nm_outlet }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="mb-3">
                     <label for="nm" class="mb-2">Nama paket</label>
                     <input type="text" name="nm_paket" id="nm" class="form-control"
                         placeholder="Isi Nama Paket" value="{{ $data->nm_paket }}">

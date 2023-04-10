@@ -2,9 +2,9 @@
 
 @section('konten')
     <div class="mb-3">
-        <h3>Table Paket</h3>
+        <h3>Table Pegawai</h3>
         <div class="d-flex justify-content-between">
-            <p>Tentang Paket yang perusahaan punya!</p>
+            <p>Tentang Pegawai yang perusahaan punya!</p>
             <a href="paket/create" type="button" class="btn btn-primary">Tambah</a>
         </div>
     </div>
@@ -15,12 +15,11 @@
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">ID Paket</th>
+                        <th scope="col">ID Pegawai</th>
                         <th scope="col">ID Outlet</th>
                         <th scope="col">Nama Outlet</th>
-                        <th scope="col">Nama Paket</th>
-                        <th scope="col">Jenis Paket</th>
-                        <th scope="col">Harga</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Jenis kelamin</th>
                         <th scope="col">Aksi</th>
                     </tr>
                 </thead>

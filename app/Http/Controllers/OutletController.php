@@ -15,8 +15,8 @@ class OutletController extends Controller
      */
     public function index()
     {
-        $data = Outlet::orderBy('id_outlet', 'Asc')->paginate(3);
-        return view('admin.tableOut')->with('data', $data);
+        $dataOut = Outlet::orderBy('id_outlet', 'Asc')->paginate(3);
+        return view('admin.tableOut')->with('data', $dataOut);
     }
 
     /**

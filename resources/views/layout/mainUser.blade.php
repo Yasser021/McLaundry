@@ -8,7 +8,7 @@
     @include('part.cssUser')
 </head>
 
-<body>
+<body style="overflow-x:hidden ">
     @include('layout.navbar')
     @yield('konten')
     @include('part.jsUser')

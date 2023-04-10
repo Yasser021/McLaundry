@@ -5,13 +5,14 @@ body {
 /* nav */
 .nav1 {
     background-color: #c0eef2;
+    padding: 25px;
     color: #00337c;
 }
 
 /* konten */
 .cont {
     position: absolute;
-    width: 1280px;
+    width: 1265px;
     height: 350px;
 }
 

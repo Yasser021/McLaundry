@@ -15,9 +15,9 @@
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">id</th>
-                        <th scope="col">Nama</th>
-                        <th scope="col">Alamat</th>
+                        <th scope="col">ID Outlet</th>
+                        <th scope="col">Nama Outlet</th>
+                        <th scope="col">Alamat Outlet</th>
                         <th scope="col">No.Telp</th>
                         <th scope="col">Aksi</th>
                     </tr>

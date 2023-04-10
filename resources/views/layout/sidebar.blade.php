@@ -43,7 +43,7 @@
                 <li class="sidebar-title">Menu</li>
 
                 <li class="sidebar-item">
-                    <a href="index.html" class="sidebar-link">
+                    <a href="../admin" class="sidebar-link">
                         <i class="bi bi-grid-fill"></i>
                         <span>Dashboard</span>
                     </a>
@@ -52,19 +52,19 @@
                 <li class="sidebar-title">Tables</li>
 
                 <li class="sidebar-item">
-                    <a href="outlet" class="sidebar-link">
+                    <a href="../outlet" class="sidebar-link">
                         <i class="bi bi-hexagon-fill"></i>
                         <span>Table Outlet</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="paket" class="sidebar-link">
+                    <a href="../paket" class="sidebar-link">
                         <i class="bi bi-hexagon-fill"></i>
                         <span>Table Paket</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="member" class="sidebar-link">
+                    <a href="../member" class="sidebar-link">
                         <i class="bi bi-hexagon-fill"></i>
                         <span>Table Member</span>
                     </a>

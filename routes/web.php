@@ -35,6 +35,7 @@ Route::get('/admin', function () {
 
 Route::resource('outlet', OutletController::class);
 Route::resource('paket', PaketController::class);
+
 // sesi login dan regis
 Route::get('sesi', [SessionController::class, 'index']);
 Route::post('sesi/login', [SessionController::class, 'login']);
